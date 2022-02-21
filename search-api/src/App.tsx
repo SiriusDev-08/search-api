@@ -1,17 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
 
-function App() {
-  
-
-  
+function Search () {
   return (
     <>
-      <h1> Essa será uma aplicação que usará Api </h1>
-
+      <h1> exemplo </h1>
+      <p> quero escrever alguma coisas</p>
     </>
-       
   );
-}
+}; 
 
-export default App;
+export default Search
+
