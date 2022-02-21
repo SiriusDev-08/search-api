@@ -1,13 +1,14 @@
+import { ItemList } from './components/list'; 
+
 import './styles/App.scss';
 
-function Search () {
+export function App () {
   return (
     <>
-      <h1> exemplo </h1>
-      <p> quero escrever alguma coisas</p>
+    <ItemList />
     </>
   );
 }; 
 
-export default Search
+
 
