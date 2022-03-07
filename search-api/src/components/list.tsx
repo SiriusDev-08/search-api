@@ -1,42 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Item } from './item';
-import api from '../_config/api.js'
-import { useSelector } from 'react-redux'
-
+import { AItem } from './Item';
+import api from '../_config/axios';
 
 type Item = {
-  name: string;
-  description?: string;
-  html_url: string;
-};
+    title: string;
+    author: string;
+    url: string;
+    setItem:(arg: string) => void;
+}
+    
+export const AList = () => {
 
-export function ItemList() {
-  // Estado porque vai mudar
-  const [item, setItem] = useState<Item[]>([]); // inicialmente vazio
-
-  const searchTerm = useSelector(state => state);
-
+  const [item, setItem] = useState<Item[]>([]); 
 
   useEffect(()=>{
-      
     const fetchData = async () => {
-
-      const response = await api.get('https://hn.algolia.com/api/v1/search?query=X')
-      setItem(response?.data);
+      const response = await api.get('https://hn.algolia.com/api/v1/search?query')
+      setItem(response?.data.hits);
     }
-
     fetchData();
-
-  },[searchTerm]);
+  },[]);
 
   return (
-    <section className="ItemList">
-      <h1>Lista de repositórios</h1>
+    <section className="itemList"> 
+      <h1>Lista de artigos </h1>
       <ul>
-        {item.map((item) => {
-          return <Item key={item.name} item={item} />;
+        {item?.map((item: any, index:number) => {
+          return <AItem key={item.index} item={item} />;
         })}
       </ul>
     </section>
-  );
+  ); 
 }

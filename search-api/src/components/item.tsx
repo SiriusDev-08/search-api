@@ -1,23 +1,21 @@
+
 interface ItemProps {
     item: {
-      name: string;
-      description?: string;
-      html_url: string;
+      index: number; 
+      title: string;
+      author: string;
+      url: string;
     };
   }
   
-  export function Item(props: ItemProps) {
+  export function AItem (props: ItemProps) {
     return (
-      <>
-      <h1> Exemplo! </h1>
-
       <li>
         <strong>
-          {(props.item && props.item.name) || 'Título padrão'}
+          {(props.item && props.item.title) || 'Título padrão'}
         </strong>
-        <p>{props.item?.description ?? 'Descrição do livro'}</p>
-        <a href={props.item?.html_url ?? ''}>Link para o livro</a>
+        <p>{props.item.author ?? 'Autor padrão'}</p>
+        <a href={props.item?.url ?? 'Url para o artigo'}> Acessar artigo </a>
       </li>
-      </>
     );
   }
