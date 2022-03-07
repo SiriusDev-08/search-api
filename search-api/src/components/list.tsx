@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AItem } from './Item';
 import api from '../_config/axios';
+import '../styles/list.scss'; 
 
 type Item = {
     title: string;
