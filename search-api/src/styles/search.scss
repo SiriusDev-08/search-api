@@ -1,0 +1,31 @@
+/* .searchBar {
+ background-color: #1F2E55;
+} */
+
+label.search {
+    color: #1F2E55;
+    margin-bottom: 50px; 
+    font-size: larger;
+}
+
+input.input {
+    float:center;
+    padding-left:5px;
+    font-size:18px;
+    border:none; 
+    height:40px;
+    width:200px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.button {
+    border:none;
+    float:center;
+    height:40px;
+    border-radius:0 7px 7px 0;
+    width:70px;
+    font-weight:bold;
+    font-size: 90%;
+    background:#5F9EA0;
+}

@@ -4,6 +4,7 @@ import api from '../_config/axios';
 import {useDispatch } from 'react-redux';
 import {ActionCodes} from '../_config/redux'; 
 import '../styles/list.scss'; 
+import '../styles/search.scss'; 
 
 type Item = {
     title: string;
@@ -38,7 +39,7 @@ export const AList = () => {
         <input
           type="text"
           className="input"
-          placeholder="Search"
+          placeholder="O que você deseja?"
           value={input}
           onChange={(evt) => setInput(evt.target.value)}
         />
@@ -50,7 +51,6 @@ export const AList = () => {
       </div>
 
       <section className="itemList"> 
-        <h1> Eis os artigos que encontramos para você: </h1>
         <ul>
             {item?.map((item: any) => {
               return <AItem key={item.objectID} item={item} />;
