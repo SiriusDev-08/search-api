@@ -1,7 +1,7 @@
 
 interface ItemProps {
     item: {
-      index: number; 
+      objectID: number; 
       title: string;
       author: string;
       url: string;

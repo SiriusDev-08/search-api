@@ -1,20 +1,25 @@
-section.item-list {
+section.itemList {
     margin: 40px;
     
     h1 {
       margin-bottom: 16px;
+      color: #ad5544;
     }
   
     ul {
       list-style: none;
   
       li {
+        color:#1F2E55;
+        font-weight: bold;
         & + li { // todali que antes dela tem uma li também vai ter uma margin-top: 20p
           margin-top: 20px;
+          color:#1F2E55; 
+          font-weight: bold;
         }
   
         p {
-          font-size: 14px;
+          font-size: 18px;
           color: #444;
           margin-top: 8px;
         }
@@ -23,7 +28,7 @@ section.item-list {
           display: inline-block; // permite dar margin top, bottom, etc
           margin-top: 16px;
           text-decoration: none; // retira o sublinhado do link
-          color: #8257e6;
+          color: #1F2E55;
         }
   
       }
