@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import {Provider} from 'react-redux';   
 import {myStore} from './_config/redux'
-import { App } from './App';
+import { App as SearchAPI } from './features/SearchAPI/App';
 
 
 ReactDOM.render(
   <Provider store={myStore}>
-    <App />
+    <SearchAPI />
   </Provider>
-,document.getElementById('roots'));
+  ,document.getElementById('roots')
+);
