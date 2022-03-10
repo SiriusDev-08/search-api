@@ -11,28 +11,34 @@ section.itemList {
       list-style: none;
   
       li {
-        color:#1F2E55;
-        font-weight: bold;
-        & + li { // todali que antes dela tem uma li também vai ter uma margin-top: 20p
           margin-top: 20px;
-          color:#1F2E55; 
+          color: #1F2E55; 
+          border: 5px solid #b9928b; 
+          border-radius: 10px; 
           font-weight: bold;
+        } /* Titles style */
+
+        li:hover{
+          background-color:#d6a698;
         }
   
-        p {
+        p { /* Authors style */
           font-size: 18px;
-          color: #444;
-          margin-top: 8px;
+          color: #303030;
+          margin-top: 10px;
         }
   
-        a {
+        a { /* URL style */
           display: inline-block; // permite dar margin top, bottom, etc
-          margin-top: 16px;
+          margin-top: 10px;
           text-decoration: none; // retira o sublinhado do link
           color: #1F2E55;
+        }
+
+        a:hover{
+          font-weight: bold;
+          color: #fffbee;
         }
   
       }
     }
-  
-  }

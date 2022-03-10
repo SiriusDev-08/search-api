@@ -1,3 +1,6 @@
+import {BsBookFill} from 'react-icons/bs';
+import {BsGlobe} from 'react-icons/bs';
+import {BsFillPeopleFill} from 'react-icons/bs'; 
 
 interface ItemProps {
     item: {
@@ -8,14 +11,16 @@ interface ItemProps {
     };
   }
   
-  export function AItem (props: ItemProps) {
+  export function Item (props: ItemProps) {
     return (
       <li>
         <strong>
-        📘 {(props.item && props.item.title) || 'Título padrão'}
+         <BsBookFill/> {(props.item && props.item.title) || 'Título padrão'}
         </strong>
-        <p> 👥{props.item.author ?? 'Autor padrão'}</p>
-        🌐 <a href={props.item?.url ?? 'Url para o artigo'}> Acessar artigo </a>
+        <p> 
+        <BsFillPeopleFill/> {props.item.author ?? 'Autor padrão'}
+        </p>
+        <BsGlobe /> <a href={props.item?.url ?? 'Url para o artigo'}> Acessar artigo </a>
       </li>
     );
   }

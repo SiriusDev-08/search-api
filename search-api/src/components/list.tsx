@@ -1,28 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { AItem } from './Item';
+import { Item } from './Item';
+import { Search } from './Search';
 import api from '../_config/axios';
-import {useDispatch } from 'react-redux';
-import {ActionCodes} from '../_config/redux'; 
+/* import {useDispatch } from 'react-redux';
+import {ActionCodes} from '../_config/redux';  */
 import '../styles/list.scss'; 
-import '../styles/search.scss'; 
 
-type Item = {
+
+type ListItem = {
     title: string;
     author: string;
     url: string;
     setItem:(arg: string) => void;
 }
     
-export const AList = () => {
+export const List = () => {
 
-  const [item, setItem] = useState<Item[]>([]); 
-  const [term, setTerm] = useState(""); 
-  const [input, setInput] = useState (""); 
-
-  let Search = () => {
-    setTerm(input); 
-  }
-
+  const [item, setItem] = useState<ListItem[]>([]); 
+  const [input, setInput] = useState<string> (""); 
+  const [term, setTerm] = useState<string>("");   
 
   useEffect(()=>{
     const fetchData = async () => {
@@ -34,26 +30,14 @@ export const AList = () => {
 
   return (
     <>
-      <div className='searchBar'>
-        <label className='search'> Pesquise aqui: </label> <br/> 
-        <input
-          type="text"
-          className="input"
-          placeholder="O que você deseja?"
-          value={input}
-          onChange={(evt) => setInput(evt.target.value)}
-        />
-        <button
-        type="button"
-        className='button'
-        onClick = {Search}  
-        > 🔍 </button>
-      </div>
+    <Search input = {input} setInput = {setInput}
+    term = {term} setTerm = {setTerm}
+     />
 
       <section className="itemList"> 
         <ul>
             {item?.map((item: any) => {
-              return <AItem key={item.objectID} item={item} />;
+              return <Item key={item.objectID} item={item} />;
             })}
         </ul>
       </section>

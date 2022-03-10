@@ -1,6 +1,8 @@
 /* .searchBar {
- background-color: #1F2E55;
-} */
+    margin-top: 0px;
+    background-color: #D2BA9E;
+    height: 100px;
+} */  
 
 label.search {
     color: #1F2E55;
@@ -12,7 +14,8 @@ input.input {
     float:center;
     padding-left:5px;
     font-size:18px;
-    border:none; 
+    border-radius: 7px 0 0 7px;
+    border-color:#121214;
     height:40px;
     width:200px;
     text-align: center;
