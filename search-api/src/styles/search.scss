@@ -6,8 +6,10 @@
 
 label.search {
     color: #1F2E55;
-    margin-bottom: 50px; 
+    margin: 10px 0px 10px 0px; 
     font-size: larger;
+    display: flex;
+    flex-direction: column;
 }
 
 input.input {

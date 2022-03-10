@@ -15,15 +15,13 @@ interface SearchProps {
 
 export const Search = ({input, term, setInput, setTerm}: SearchProps ) => {
 
-
-
     let Look = () => {
         setTerm(input); 
       }
 
     return (
         <div className='searchBar'>
-        <label className='search'> Pesquise aqui: </label> <br/> 
+        <label className='search'> Pesquise aqui: </label> 
         <input
           type="text"
           className="input"
@@ -31,6 +29,7 @@ export const Search = ({input, term, setInput, setTerm}: SearchProps ) => {
           value={input}
           onChange={(evt) => setInput(evt.target.value)}
         />
+
         <button
         type="button"
         className='button'

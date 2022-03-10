@@ -5,6 +5,7 @@ import api from '../_config/axios';
 /* import {useDispatch } from 'react-redux';
 import {ActionCodes} from '../_config/redux';  */
 import '../styles/list.scss'; 
+import { ReactReduxContext } from 'react-redux';
 
 
 type ListItem = {
@@ -44,3 +45,4 @@ export const List = () => {
     </>    
   ); 
 }
+
