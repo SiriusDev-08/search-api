@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header } from '../../containers/Header/Header'; 
 import { Footer } from '../../containers/Footer/Footer'; 
-import { List as ItemList} from '../../components/List'; 
+import { List as ItemList} from '../../components/list'; 
 
 import '../../styles/global.scss'; 
 
