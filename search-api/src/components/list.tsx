@@ -4,8 +4,6 @@ import { Search } from './Search';
 import api from '../_config/axios';
 import '../styles/list.scss'; 
 
-
-
 type ListItem = {
     title: string;
     author: string;
