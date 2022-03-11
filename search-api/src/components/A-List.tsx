@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Item } from './Item';
+import { Item } from './A-Item';
 import { Search } from './Search';
 import api from '../_config/axios';
 import '../styles/list.scss'; 
