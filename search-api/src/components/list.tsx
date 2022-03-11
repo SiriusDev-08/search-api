@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Item } from './Item';
 import { Search } from './Search';
 import api from '../_config/axios';
-/* import {useDispatch } from 'react-redux';
-import {ActionCodes} from '../_config/redux';  */
 import '../styles/list.scss'; 
-import { ReactReduxContext } from 'react-redux';
+
 
 
 type ListItem = {
